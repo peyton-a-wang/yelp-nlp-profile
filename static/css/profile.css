@@ -1,0 +1,212 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
+body, html {
+  height: 100%;
+  margin: 0;
+  color: #777;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+/* Sidebar */
+
+  .sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 25px;
+    background-color: rgb(6, 7, 53);
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgb(6, 7, 53), rgb(109, 106, 106));
+    background-attachment: fixed;
+  }
+
+    .sidebar a {
+      padding: 20px 8px 6px 16px;
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 200;
+      color: white;
+    }
+
+    .sidebar a:hover {
+      color: rgb(240, 147, 40);
+    }
+
+/* Background Image Dividers */
+
+  .bgimg {
+    position: relative;
+    margin-left: 160px;
+    padding: 0px 10px;
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.85;
+  }
+
+  #personal-img, #trends-img, #reviews-img {
+    background-image: url('../images/nature.jpg');
+  }
+
+  #friends-img, #share-img {
+    background-image: url('../images/sunset.jpg');
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .border {
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    border: 2px solid rgba(121, 121, 118, 0.486);
+    background-color: rgba(218, 214, 211, 0.411);
+    font-size: 50px;
+  }
+
+  @media only screen and (max-device-width: 1024px) {
+
+    .bgimg {
+      background-attachment: scroll;
+    }
+  }
+
+/* Columns */
+
+  .row {
+    display: flex;
+  }
+
+    .row > .leftcolumn {
+      float: left;
+      width: 40%;
+      padding-right: 50px;
+    }
+
+    .row > .rightcolumn {
+      float: right;
+      width: 40%;
+      padding-left: 50px;
+    }
+
+    #prof-pic {
+      position: flex;
+      float: right;
+      margin: 5px;
+      border-radius: 50%; 
+    }
+
+/* Main Sections */
+
+  .main {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 30px 80px 50px 80px;
+    text-align: justify;
+    margin-left: 160px;
+  }
+
+
+/* Questions */
+ .question {
+   padding-bottom: 50px;
+ }
+
+ .question > p {
+   margin-top: 40px;
+   margin-bottom: 5px;
+ }
+
+/* Bar Graphs */
+
+ .bargraph {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.mostvisited {
+  text-align: right;
+  padding: 10px 10px 10px 10px;
+  padding-bottom: 10px;
+  color: black;
+  width: 90%;
+  background-color: #90E5F2
+ }
+
+/* Donut Charts */
+  #leftbox, #middlebox, #rightbox {
+    text-align: center;
+    width: 33%; 
+    height: 280px; 
+    padding-bottom: 50px;
+  }
+
+  #leftbox { 
+    float: left;  
+  } 
+
+  #middlebox { 
+    float: left;  
+  } 
+
+  #rightbox { 
+    float: right; 
+  } 
+
+/* Map */
+#container {
+  margin: 0;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+/* Share Section */
+
+  .button {
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 0.2em 0.9em 0.2em 0.9em;
+    border: 3px solid rgb(240, 147, 40);
+    background-color: rgba(218, 214, 211, 0.281);
+    text-align: center;
+    color: white;
+  }
+
+  .button:hover {
+    background-color: rgba(218, 214, 211, 0.596);
+  }
+
+  #thanks {
+    text-align: center;
+  }

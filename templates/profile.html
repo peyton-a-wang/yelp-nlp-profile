@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>{{data['name']}}'s Profile</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../static/css/profile.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="index" type="index/html" href="index.html" />
+  </head>
+
+  <body>
+    <div id="profile-wrapper">
+      
+    <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="#personal"><i class="fa fa-fw fa-home"></i> Your Profile</a>
+        <a href="#friends"><i class="fa fa-fw fa-user"></i> Friends</a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-fw fa-envelope"></i> Share</a>
+        <a href="welcome.html"><i class="fa fa-fw fa-share"></i> Exit</a>
+      </div>
+
+    <!-- Personal Profile -->
+      <section id="personal">
+        <div id="personal-img" class="bgimg">
+          <div class="caption">
+            <div class="border">{{data['name']}}'s Profile</div>
+          </div>
+        </div>
+
+      <!-- General Info -->
+        <div id="general" class="main">
+          <h3>General Information About You</h3>
+          <div class="row">
+            <div class="leftcolumn">
+              <img id="prof-pic" src="../static/images/profile.jpg" height=250 width=250>
+            </div>
+            <div class="rightcolumn">
+              <p><b>Name: </b>{{data['name']}}</p>
+              <p><b>Hometown: </b>{{data['hometown']}}</p>
+              <p><b>Total Reviews: </b>{{data['totalReviews']}}</p>
+              <p><b>Average Rating: </b>{{data['averageRating']}} stars</p>
+              <p><b>Enthusiasm Score: </b>{{data['enthusiasmScore']}}/10</p>
+            </div>
+          </div>
+        </div>
+
+      <!-- Trends -->
+        <div id="trends-img" class="bgimg">
+          <div class="caption">
+            <div class="border">Trends</div>
+          </div>
+        </div>
+
+        <div id="trends" class="main">
+          <div class="question">
+            <h3>Which places did you visit the most?</h3>
+            <canvas id="barchart" height=100></canvas>
+          </div>
+
+          <div class="question">
+            <h3>Which places were you most enthusiastic about?</h3>
+            <div id="boxes">
+              <div id="leftbox">
+                <p>{{data['mostEnthusiasticPlaces'][0][0]}}</p>
+                <canvas id="donutchart1" value=100 height=200></canvas>
+              </div>
+              <div id="middlebox">
+                <p>{{data['mostEnthusiasticPlaces'][1][0]}}</p>
+                <canvas id="donutchart2" value=200 height=200></canvas>
+              </div>
+              <div id="rightbox">
+                <p>{{data['mostEnthusiasticPlaces'][2][0]}}</p>
+                <canvas id="donutchart3" value=300 height=200></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>Which cities did you visit the most?</h3>
+            <p>{{data['mostVisitedCities'][0][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['mostVisitedCities'][0][1]}}</div>
+            </div>
+            <p>{{data['mostVisitedCities'][1][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['mostVisitedCities'][1][1]}}</div>
+            </div>
+            <p>{{data['mostVisitedCities'][2][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['mostVisitedCities'][2][1]}}</div>
+            </div>
+          </div>
+        </div>
+
+      <!-- Recent Reviews -->
+        <div id="reviews-img" class="bgimg">
+          <div class="caption">
+            <div class="border">Recent Reviews</div>
+          </div>
+        </div>
+
+        <div id="reviews" class="main">
+          <p>"{{data['recentReviews'][0]}}"</p>
+          <p>"{{data['recentReviews'][1]}}"</p>
+          <p>"{{data['recentReviews'][2]}}"</p>
+        </div>
+      </section>
+
+    <!-- Friends -->
+      <section id="friends">
+        <div id="friends-img" class="bgimg">
+          <div class="caption">
+            <div class="border">{{data["name"]}}'s Friends</div>
+        </div>
+        </div>
+
+      <!-- General Friend Info -->
+        <div id="general-friend" class="main">
+          <h3>General Information About Your Friends</h3>
+          <p><b>Average Rating: </b>{{data['friendAverageRating']}} stars</p>
+          <p><b>Enthusiastic Score: </b>{{data['friendEnthusiasmScore']}}/10</p>
+        </div>
+
+      <!-- Friend Trends -->
+        <div id="trends-friend" class="main">
+          <div class="question">
+            <h3>Which places did your friends visit the most?</h3>
+            <p>{{data['friendVisitedPlaces'][0][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['friendVisitedPlaces'][0][0]}}</div>
+            </div>
+            <p>{{data['friendVisitedPlaces'][1][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['friendVisitedPlaces'][1][1]}}</div>
+            </div>
+            <p>{{data['friendVisitedPlaces'][2][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['friendVisitedPlaces'][2][1]}}</div>
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>Which places were your friends most enthusiastic about?</h3>
+            <div id="boxes">
+              <div id="leftbox">
+                <p>{{data['friendEnthusiasticPlaces'][0][0]}}</p>
+                <canvas id="donutchart4" value=100 height=200></canvas>
+              </div>
+              <div id="middlebox">
+                <p>{{data['friendEnthusiasticPlaces'][1][0]}}</p>
+                <canvas id="donutchart5" value=200 height=200></canvas>
+              </div>
+              <div id="rightbox">
+                <p>{{data['friendEnthusiasticPlaces'][2][0]}}</p>
+                <canvas id="donutchart6" value=300 height=200></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>Which cities did your friends visit the most?</h3>
+            <p>{{data['friendVisitedCities'][0][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['friendVisitedCities'][0][1]}}</div>
+            </div>
+            <p>{{data['friendVisitedCities'][1][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['friendVisitedCities'][1][1]}}</div>
+            </div>
+            <p>{{data['friendVisitedCities'][2][0]}}</p>
+            <div class="bargraph">
+              <div class="mostvisited">{{data['friendVisitedCities'][2][1]}}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Share -->
+      <section id="share">
+        <div id="share-img" class="bgimg">
+          <div class="caption">
+            <a href="https://www.facebook.com/" class="button">SHARE YOUR PROFILE!</a>
+          </div>
+        </div>
+
+        <div id="thanks" class="main">
+            <p>Thank you for using our application to view the highlights of your Yelp profile.<br><br>
+              Be sure to keep writing Yelp reviews and come back soon to see your progress!<p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="../static/js/charts.js"></script>
+    
+  </body>
+</html>

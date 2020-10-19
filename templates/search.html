@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <title>Search - Yelp Profile</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../static/css/welcome_search.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+      <!-- Instructions -->
+      <p>Please enter your user ID to see your results.</p>
+
+      <!-- Submit -->
+      <div class="submit"></div>
+        <form method="GET" action="{{url_for('query', )}}" autocomplete="off">
+          <label><input id="search" class="button" type="text" required name="query" placeholder="User ID"></label>
+          <input id="enter" class="button" type="submit" value="ENTER">
+          <!-- <a id="enter" href="profile.html" class="button">ENTER</a> -->
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>

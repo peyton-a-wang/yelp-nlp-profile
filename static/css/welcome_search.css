@@ -1,0 +1,87 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
+html, body, head {
+  background-color: rgb(6, 7, 53);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient(to bottom, rgb(6, 7, 53), rgb(109, 106, 106));
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#wrapper {
+  margin: auto;
+  width: 60%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+body, header, p {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  text-align: center;
+}
+
+header {
+  color: white;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+p { 
+  margin: 10px;
+  color: rgb(175, 170, 170);
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.start, .submit {
+  padding-top: 60px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+#start {
+  padding: 0.2em 0.9em 0.2em 0.9em;
+  border: 3px solid rgb(240, 147, 40);
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: white;
+}
+
+#start:hover, #enter:hover {
+  background-color: rgba(218, 214, 211, 0.281);
+}
+
+#search {
+  width: 300px;
+  margin: 5px;
+  padding: 0.1em 0.3em 0.1em 0.3em;
+  outline: none;
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  font-size: 25px;
+  font-weight: 10;
+}
+
+#enter {
+  padding: 0.1em 0.3em 0.1em 0.3em;
+  outline: none;
+  border: 3px solid rgb(240, 147, 40);
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 0.1em;
+}
